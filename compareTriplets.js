@@ -31,3 +31,7 @@ function compareTriplets(a, b) {
 
 	return ComparisonPoints;
 }
+const a = [5, 6, 7];
+const b = [3, 6, 10];
+
+compareTriplets(a, b);
