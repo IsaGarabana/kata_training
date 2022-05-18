@@ -5,18 +5,16 @@
 // The maximum height candles are 4 units high. There are 2 of them, so return 2.
 
 function birthdayCakeCandles(candles) {
-	const orderedCandles = candles.sort((a, b) => b - a);
-	let tallestCandles = [];
-
-	for (let i = 0; i <= orderedCandles.length; i++) {
+	const orderedCandles = candles.sort((a, b) => (a > b ? -1 : 1));
+	const tallestCandles = [orderedCandles[0]];
+	for (let i = 1; i < orderedCandles.length; i++) {
 		if (orderedCandles[i] === orderedCandles[0]) {
 			tallestCandles.push(orderedCandles[i]);
 		}
-		console.log(orderedCandles);
-		console.log(tallestCandles);
-		return tallestCandles;
 	}
+	return tallestCandles.length;
 }
 
 const candles = [3, 2, 5, 30, 30, 7, 6, 9, 10, 30];
 birthdayCakeCandles(candles);
+console.log(birthdayCakeCandles(candles).length);
