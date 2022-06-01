@@ -22,7 +22,6 @@ function solution(A) {
 		if (orderedArray[i] > 0 && orderedArray[i] == number) number++;
 	}
 	return number;
-	console.log(number);
 }
 
 const A = [1, 3, 6, 4, 0, -1, 2, 9, -10];
